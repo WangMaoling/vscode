@@ -1,36 +1,10 @@
-# feiyue
-
-> A Vue.js project
-
-项目不仅仅在web端显示，而且还会嵌入到肺悦2PC客户端，以及android客户端的肺悦云的webview里面，在PC客户端显示的时候有以下几点问题：
-1.用到el-icon 字体图标的地方要注意，图标标签里面不可以放文字。
-2.echarts折线图以及柱状图等显示的时候会错位，需要修改渲染方式为svg
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification 正式打包 打包根路径需要在 webpack.base.conf.js中设置
-npm run build
-
-# 测试环境打包  或者 命令：npm run build test
-npm run build -- test
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
-项目中有5个组件用到版本处理分别是：
-1.detail.vue //报告详情页面
-2.subordinateDetail.vue //下级医院报告详情页面
-3.diagnosis.vue //辅助诊断报告详情页面
-4.subordinateDetail_blank.vue //远程会诊 患者的报告详情页面
-5.print.vue //打印处理报告版本
+https://marketplace.visualstudio.com/items?itemName=nonoroazoro.syncing
+
+
+1、Settings Sync是vscode中同步设置和安装插件的小工具，在老电脑和新电脑的vscode的扩展商店中搜索并安装它
+2、在老电脑上登陆Github>Your profile> settings>Developer settings>personal access tokens>generate new token，随便输入一个名称， 比方叫A，勾选Gist，提交
+3、保存Github Access Token
+4、打开老电脑上的vscode，Ctrl+Shift+P打开命令框，输入sync，找到update/upload settings，输入Token（就是在github上生成的那串字符），上传成功后会返回Gist ID，保存此Gist ID.
+5、若想在新电脑上同步老电脑的vscode配置，同样，在新电脑中，Ctrl+Shift+P打开命令框，输入sync，找到Download settings，会自动跳转到Github的Token编辑界面，点Edit，regenerate token，保存新生成的token，在vscode命令框中输入此Token，回车，再输入之前在老电脑上操作生成的的Gist ID（之前老电脑操作完成可以在老电脑的 vscode的setting中看到一个配置叫sync.gist，我们复制它的值就可以了，不要引号），即可同步插件和设置。
